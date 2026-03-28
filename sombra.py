@@ -98,7 +98,10 @@ def run_cli(args) -> int:
         console.print(f"[{C_BAD}][ERROR] Profile not found: {args.profile}[/{C_BAD}]")
         return 1
 
-    tools_dir = Path(__file__).parent / "tools"
+    if getattr(sys, 'frozen', False):
+        tools_dir = Path(sys.executable).parent / "tools"
+    else:
+        tools_dir = Path(__file__).parent / "tools"
 
     collector = SombraCollector(
         case_name  = args.case,
@@ -159,7 +162,10 @@ def run_interactive() -> int:
         0 on success or clean exit, 1 on failure.
     """
     log       = make_logger()
-    tools_dir = Path(__file__).parent / "tools"
+    if getattr(sys, 'frozen', False):
+        tools_dir = Path(sys.executable).parent / "tools"
+    else:
+        tools_dir = Path(__file__).parent / "tools"
     tools_dir.mkdir(exist_ok=True)
 
     profiles = load_all_profiles()
