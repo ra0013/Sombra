@@ -1,0 +1,50 @@
+{
+  "name": "Persistence Only",
+  "description": "Post-compromise persistence hunting — focused collection of all persistence mechanisms. Fast and lightweight. Use when initial triage is already complete.",
+  "sections": {
+    "volatile":    true,
+    "memory":      false,
+    "network":     false,
+    "services":    true,
+    "handles":     false,
+    "persistence": true,
+    "artifacts":   false,
+    "filesystem":  false,
+    "software":    false
+  },
+  "sysinternals": {
+    "autorunsc":     true,
+    "pslist":        true,
+    "sigcheck":      true,
+    "handle":        false,
+    "tcpvcon":       false,
+    "listdlls":      false,
+    "streams":       false,
+    "pipelist":      false,
+    "logonsessions": false,
+    "psloggedon":    false,
+    "psinfo":        false,
+    "procdump":      false
+  },
+  "nirsoft": {
+    "lastactivityview": false
+  },
+  "memory": {
+    "winpmem":  false,
+    "dumpit":   false,
+    "procdump": false,
+    "hiberfil": false,
+    "procdump_pid": null
+  },
+  "flag_keywords": [
+    "mshta", "wscript", "cscript", "regsvr32", "rundll32",
+    "powershell", "invoke-", "encodedcommand",
+    "schtasks", "sc create", "reg add",
+    "appdata", "temp", "programdata",
+    "certutil", "bitsadmin"
+  ],
+  "flag_event_ids": [
+    4697, 4698, 4699, 4700,
+    4720, 4726, 7045, 4104
+  ]
+}

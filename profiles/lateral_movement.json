@@ -1,0 +1,52 @@
+{
+  "name": "Lateral Movement",
+  "description": "Domain compromise or lateral movement — focuses on credential theft, remote execution, authentication anomalies, and network connections.",
+  "sections": {
+    "volatile":    true,
+    "memory":      false,
+    "network":     true,
+    "services":    true,
+    "handles":     true,
+    "persistence": true,
+    "artifacts":   true,
+    "filesystem":  false,
+    "software":    false
+  },
+  "sysinternals": {
+    "autorunsc":     true,
+    "pslist":        true,
+    "sigcheck":      true,
+    "handle":        true,
+    "tcpvcon":       true,
+    "listdlls":      true,
+    "streams":       false,
+    "pipelist":      true,
+    "logonsessions": true,
+    "psloggedon":    true,
+    "psinfo":        true,
+    "procdump":      false
+  },
+  "nirsoft": {
+    "lastactivityview": true
+  },
+  "memory": {
+    "winpmem":  false,
+    "dumpit":   false,
+    "procdump": false,
+    "hiberfil": false,
+    "procdump_pid": null
+  },
+  "flag_keywords": [
+    "mimikatz", "sekurlsa", "wce", "pass-the-hash",
+    "invoke-", "encodedcommand", "psexec", "wmic",
+    "net use", "net view", "nltest", "dsquery",
+    "bloodhound", "sharphound", "rubeus", "kerberoast",
+    "at.exe", "schtasks /create", "sc create",
+    "reg add", "certutil", "bitsadmin"
+  ],
+  "flag_event_ids": [
+    4624, 4625, 4648, 4672, 4688, 4697, 4698,
+    4720, 4726, 4732, 4740, 4768, 4769, 4771,
+    4776, 4778, 4779, 7045, 4104
+  ]
+}

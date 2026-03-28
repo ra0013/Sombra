@@ -1,0 +1,52 @@
+{
+  "name": "Initial Access",
+  "description": "Phishing or initial access investigation — focuses on email client activity, browser history, document execution, macro activity, and first-stage payload execution.",
+  "sections": {
+    "volatile":    true,
+    "memory":      false,
+    "network":     true,
+    "services":    true,
+    "handles":     false,
+    "persistence": true,
+    "artifacts":   true,
+    "filesystem":  false,
+    "software":    false
+  },
+  "sysinternals": {
+    "autorunsc":     true,
+    "pslist":        true,
+    "sigcheck":      true,
+    "handle":        false,
+    "tcpvcon":       true,
+    "listdlls":      true,
+    "streams":       false,
+    "pipelist":      false,
+    "logonsessions": false,
+    "psloggedon":    false,
+    "psinfo":        true,
+    "procdump":      false
+  },
+  "nirsoft": {
+    "lastactivityview": true
+  },
+  "memory": {
+    "winpmem":  false,
+    "dumpit":   false,
+    "procdump": false,
+    "hiberfil": false,
+    "procdump_pid": null
+  },
+  "flag_keywords": [
+    "mshta", "wscript", "cscript", "regsvr32", "rundll32",
+    "powershell", "invoke-", "encodedcommand", "bypass",
+    "downloadstring", "iex", "invoke-expression",
+    "word", "excel", "outlook", "macro",
+    "temp", "appdata", "programdata",
+    "certutil", "bitsadmin", "curl", "wget",
+    "office", ".doc", ".xls", ".pdf"
+  ],
+  "flag_event_ids": [
+    4624, 4625, 4688, 4697, 4698,
+    4720, 7045, 4104, 4103, 1102
+  ]
+}

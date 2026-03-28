@@ -1,0 +1,51 @@
+{
+  "name": "Ransomware",
+  "description": "Ransomware incident — focuses on encryption activity, shadow copy deletion, lateral staging, and persistence.",
+  "sections": {
+    "volatile":    true,
+    "memory":      false,
+    "network":     true,
+    "services":    true,
+    "handles":     true,
+    "persistence": true,
+    "artifacts":   true,
+    "filesystem":  true,
+    "software":    false
+  },
+  "sysinternals": {
+    "autorunsc":     true,
+    "pslist":        true,
+    "sigcheck":      true,
+    "handle":        true,
+    "tcpvcon":       true,
+    "listdlls":      true,
+    "streams":       true,
+    "pipelist":      false,
+    "logonsessions": false,
+    "psloggedon":    false,
+    "psinfo":        true,
+    "procdump":      false
+  },
+  "nirsoft": {
+    "lastactivityview": true
+  },
+  "memory": {
+    "winpmem":  false,
+    "dumpit":   false,
+    "procdump": false,
+    "hiberfil": false,
+    "procdump_pid": null
+  },
+  "flag_keywords": [
+    "vssadmin delete", "wbadmin", "bcdedit", "cipher",
+    "wmic shadowcopy", "sdelete", ".encrypt", ".locked",
+    "ransomnote", "readme.txt", "how_to_decrypt",
+    "mimikatz", "invoke-", "encodedcommand", "bypass",
+    "net use", "psexec", "wscript", "mshta",
+    "certutil", "bitsadmin", "downloadstring"
+  ],
+  "flag_event_ids": [
+    4624, 4625, 4648, 4688, 4697, 4698, 4699,
+    4720, 4726, 7045, 4104, 1102, 104
+  ]
+}

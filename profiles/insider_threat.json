@@ -1,0 +1,53 @@
+{
+  "name": "Insider Threat",
+  "description": "Insider threat or data exfiltration — focuses on user activity, USB usage, file access patterns, email clients, browser history, and cloud storage.",
+  "sections": {
+    "volatile":    true,
+    "memory":      false,
+    "network":     true,
+    "services":    false,
+    "handles":     true,
+    "persistence": true,
+    "artifacts":   true,
+    "filesystem":  true,
+    "software":    true
+  },
+  "sysinternals": {
+    "autorunsc":     true,
+    "pslist":        true,
+    "sigcheck":      false,
+    "handle":        true,
+    "tcpvcon":       true,
+    "listdlls":      false,
+    "streams":       true,
+    "pipelist":      false,
+    "logonsessions": true,
+    "psloggedon":    true,
+    "psinfo":        true,
+    "procdump":      false
+  },
+  "nirsoft": {
+    "lastactivityview": true
+  },
+  "memory": {
+    "winpmem":  false,
+    "dumpit":   false,
+    "procdump": false,
+    "hiberfil": false,
+    "procdump_pid": null
+  },
+  "flag_keywords": [
+    "robocopy", "xcopy", "compress", "7z", "winrar", "winzip",
+    "dropbox", "onedrive", "googledrive", "box.com",
+    "usb", "removable", "usbstor",
+    "outlook", "thunderbird", "mailto",
+    "ftp", "sftp", "scp", "rclone",
+    "mega", "wetransfer", "sendspace",
+    "net use", "net share"
+  ],
+  "flag_event_ids": [
+    4624, 4625, 4648, 4663, 4670, 4688,
+    4698, 4720, 4726, 4800, 4801,
+    4802, 4803, 6416, 6419, 6420
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "sysinternals": {
+    "autorunsc": "autorunsc.exe",
+    "pslist": "pslist.exe",
+    "sigcheck": "sigcheck.exe",
+    "handle": "handle.exe",
+    "tcpvcon": "tcpvcon.exe",
+    "listdlls": "listdlls.exe",
+    "streams": "streams.exe",
+    "pipelist": "pipelist.exe",
+    "logonsessions": "logonsessions.exe",
+    "psloggedon": "PsLoggedon.exe",
+    "psinfo": "psinfo.exe",
+    "procdump": "procdump.exe"
+  },
+  "nirsoft": {
+    "lastactivityview": "LastActivityView.exe",
+    "browsinghistory": "BrowsingHistoryView.exe"
+  },
+  "memory": {
+    "winpmem": "go-winpmem_amd64_1.0-rc2_signed.exe",
+    "dumpit": "DumpIt.exe",
+    "procdump": "procdump.exe"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Default",
+  "description": "Full collection — all sections enabled. Use when investigation type is unknown.",
+  "sections": {
+    "volatile":    true,
+    "memory":      false,
+    "network":     true,
+    "services":    true,
+    "handles":     true,
+    "persistence": true,
+    "artifacts":   true,
+    "filesystem":  true,
+    "software":    true
+  },
+  "sysinternals": {
+    "autorunsc":     true,
+    "pslist":        true,
+    "sigcheck":      true,
+    "handle":        true,
+    "tcpvcon":       true,
+    "listdlls":      true,
+    "streams":       true,
+    "pipelist":      true,
+    "logonsessions": true,
+    "psloggedon":    true,
+    "psinfo":        true,
+    "procdump":      false
+  },
+  "nirsoft": {
+    "lastactivityview": true
+  },
+  "memory": {
+    "winpmem":  false,
+    "dumpit":   false,
+    "procdump": false,
+    "hiberfil": false,
+    "procdump_pid": null
+  },
+  "flag_keywords": [
+    "mimikatz", "invoke-", "encodedcommand", "vssadmin delete",
+    "bypass", "downloadstring", "net user", "psexec",
+    "wce", "sekurlsa", "pass-the-hash", "mshta", "wscript",
+    "regsvr32", "rundll32", "certutil", "bitsadmin"
+  ],
+  "flag_event_ids": [
+    4624, 4625, 4648, 4672, 4688, 4697, 4698, 4699, 4700,
+    4720, 4726, 4732, 4740, 7045, 4104, 4103, 1102, 104
+  ]
+}
