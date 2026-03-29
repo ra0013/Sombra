@@ -4,10 +4,6 @@
 
 ---
 
-Sombra works in the shade — the artifacts the OS keeps hidden from the average user. Registry persistence keys, BAM/DAM execution timestamps, WMI subscriptions, prefetch evidence, named pipes, USB history. The things that are there whether the user knows it or not. That's where the analyst works.
-
----
-
 ## Overview
 
 Sombra is a cross-platform incident response triage tool written in Python. It collects volatile and semi-volatile forensic artifacts from live Windows and Linux systems, following the trusted toolset methodology: every tool is hashed before execution and re-verified after collection. All output is hashed and recorded in a manifest for chain of custody.
